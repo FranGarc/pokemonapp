@@ -1,6 +1,11 @@
 package com.garciafrancisco.pokemonapp.data.model
 
-data class Pokemon (
+data class PokemonListResponse (
+    val name: String,
+    val url: String,
+)
+
+data class PokemonResponse (
     val id: Int,
     val name: String,
     val sprites: PokemonSprites,
