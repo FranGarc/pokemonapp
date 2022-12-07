@@ -15,7 +15,7 @@ interface PokemonAPI {
     suspend fun getPokemons(
         @Query("limit") limit: Int = DEFAULT_RESULT_LIMIT,
         @Query("offset") first: Int = 0,
-    ): Response<PokemonListResponse>
+    ): Response<PokemonResponse>
 
     @GET("api/v2/pokemon/{id}")
     suspend fun getPokemonById(

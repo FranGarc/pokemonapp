@@ -1,19 +1,21 @@
 package com.garciafrancisco.pokemonapp.data.model
 
-data class PokemonListResponse (
-    val name: String,
-    val url: String,
-)
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
+@Entity(
+    tableName = "Pokemon"
+)
 data class PokemonResponse (
+    @PrimaryKey
     val id: Int,
     val name: String,
-    val sprites: PokemonSprites,
-    val height: Int,
-    val weight: Int,
-    val abilities: List<PokemonAbilityItem>,
-    val forms: List<PokemonForm>,
-    val types: List<PokemonTypeItem>,
+//    val sprites: PokemonSprites? = null,
+//    val height: Int?= null,
+//    val weight: Int?= null,
+//    val abilities: List<PokemonAbilityItem>?= null,
+//    val forms: List<PokemonForm>?= null,
+//    val types: List<PokemonTypeItem>?= null,
 )
 
 data class PokemonForm (
