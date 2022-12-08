@@ -5,10 +5,10 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import com.garciafrancisco.pokemonapp.data.model.PokemonResponse
+import com.garciafrancisco.pokemonapp.data.model.Pokemon
 
 @Database(
-    entities = [PokemonResponse::class],
+    entities = [Pokemon::class],
     version = 1
 )
 @TypeConverters(Converters::class)

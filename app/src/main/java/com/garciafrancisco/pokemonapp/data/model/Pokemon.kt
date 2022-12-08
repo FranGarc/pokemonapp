@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 @Entity(
     tableName = "Pokemon"
 )
-data class PokemonResponse (
+data class Pokemon (
     @PrimaryKey
     val id: Int,
     val name: String,

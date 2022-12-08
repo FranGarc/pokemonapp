@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="com.garciafrancisco.pokemonapp.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:name="com.garciafrancisco.pokemonapp.ui.PokemonListFragment"
+        android:label="@string/pokemon_list_fragment_label"
+        tools:layout="@layout/fragment_pokemon_list">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
@@ -17,9 +17,9 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.garciafrancisco.pokemonapp.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:name="com.garciafrancisco.pokemonapp.ui.PokemonDetailFragment"
+        android:label="@string/pokemon_detail_fragment_label"
+        tools:layout="@layout/fragment_pokemon_detail">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"

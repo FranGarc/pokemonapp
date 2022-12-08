@@ -10,10 +10,16 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import androidx.lifecycle.ViewModelProvider
 import com.garciafrancisco.pokemonapp.R
+import com.garciafrancisco.pokemonapp.data.db.PokemonDatabase
+import com.garciafrancisco.pokemonapp.data.repository.PokemonRepository
+import com.garciafrancisco.pokemonapp.data.repository.PokemonViewModelProviderFactory
 import com.garciafrancisco.pokemonapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var viewModel: PokemonViewModel
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
@@ -36,6 +42,11 @@ class MainActivity : AppCompatActivity() {
                     .setAnchorView(R.id.fab)
                     .setAction("Action", null).show()
         }
+
+        val database = PokemonDatabase(this)
+        val repository = PokemonRepository(database)
+        val viewModelProviderFactory = PokemonViewModelProviderFactory(pokemonRepository = repository)
+        viewModel = ViewModelProvider( this, viewModelProviderFactory).get(PokemonViewModel::class.java)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

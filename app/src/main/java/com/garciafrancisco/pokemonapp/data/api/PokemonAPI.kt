@@ -1,7 +1,6 @@
 package com.garciafrancisco.pokemonapp.data.api
 
-import com.garciafrancisco.pokemonapp.data.model.PokemonListResponse
-import com.garciafrancisco.pokemonapp.data.model.PokemonResponse
+import com.garciafrancisco.pokemonapp.data.model.Pokemon
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -15,15 +14,15 @@ interface PokemonAPI {
     suspend fun getPokemons(
         @Query("limit") limit: Int = DEFAULT_RESULT_LIMIT,
         @Query("offset") first: Int = 0,
-    ): Response<PokemonResponse>
+    ): Response<Pokemon>
 
     @GET("api/v2/pokemon/{id}")
     suspend fun getPokemonById(
         @Path("id") id: Int ,
-    ): Response<PokemonResponse>
+    ): Response<Pokemon>
 
     @GET("api/v2/pokemon/{name}")
     suspend fun getPokemonByName(
         @Path("name") name: String ,
-    ): Response<PokemonResponse>
+    ): Response<Pokemon>
 }
