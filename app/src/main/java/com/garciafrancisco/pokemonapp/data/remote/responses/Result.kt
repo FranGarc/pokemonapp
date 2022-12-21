@@ -1,4 +1,4 @@
-package com.garciafrancisco.pokemonapp.data.api
+package com.garciafrancisco.pokemonapp.data.remote.responses
 
 data class Result(
     val name: String,

@@ -7,6 +7,7 @@ POC app using [pokemon api](https://pokeapi.co/docs/v2) to practice android/kotl
 
 ## General info
 This project is simple consumer of the [pokemon api](https://pokeapi.co/docs/v2).
+It will obtain data from said api and store it in a local database for future use.
 
 <!--## Technologies
 Project is created with:
