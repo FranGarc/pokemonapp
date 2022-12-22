@@ -1,20 +1,32 @@
 # PokemonApp - pokedex in Android
 POC app using [pokemon api](https://pokeapi.co/docs/v2) to practice android/kotlin
+
 ## Table of contents
 * [General info](#general-info)
-<!--* [Technologies](#technologies)
-* [Setup](#setup)-->
+* [Patterns](#patterns)
+* [Technologies](#technologies)
+* [Future iterations](#future-iterations)
+
 
 ## General info
-This project is simple consumer of the [pokemon api](https://pokeapi.co/docs/v2).
-It will obtain data from said api and store it in a local database for future use.
+This project is simple consumer of the [pokemon api](https://pokeapi.co/docs/v2), from where it will obtain data 
+which will store in a local database for future use.
 
-<!--## Technologies
+## Patterns
+* MVVM
+* Repository pattern
+
+## Technologies
 Project is created with:
-* Lorem version: 12.3
-* Ipsum version: 2.33
-* Ament library version: 999
+* Retrofit
+* Room
+* LiveData
+* XML layouts
+* Navigation component
+* Dagger Hilt
 
-## Setup
-To run this project, install it locally using npm:
--->
+## Future iterations
+
+* Change LiveData to Flow
+* Change XML layouts to Jetpack Compose
+
